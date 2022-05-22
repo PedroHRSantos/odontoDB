@@ -7,6 +7,8 @@ import java.util.logging.Logger;
 
 public class Main {
 	public static void main(String[] args) {
+		
+		//deleta essa classe pfv
 		try {
 			Class.forName("com.mysql.jdbc.Drive");
 			Connection conexao = DriverManager.getConnection("jdbc:mysql:localhost/banco", "usuario", "senha");
