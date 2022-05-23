@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Cliente extends Usuario{
 	private int idCliente;
 	private String nomeCliente;
-	private int cpf;
+	private String cpf;
 	private String endereco;
 	private Date dataNascimento;
 	private String email;
@@ -27,10 +27,10 @@ public class Cliente extends Usuario{
 	public void setNomeCliente(String nomeCliente) {
 		this.nomeCliente = nomeCliente;
 	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	public String getEndereco() {
@@ -62,18 +62,18 @@ public class Cliente extends Usuario{
 	Scanner scan = new Scanner(System.in);
 	public void informacaoCliente() {
 		
-		System.out.println("Nome do cliente");
+		System.out.println("Nome do cliente: ");
 		setNomeCliente(scan.next());
 		
-		System.out.println("cpf");
-		setCpf(scan.nextInt());
-		System.out.println("endereço");
+		System.out.println("cpf: ");
+		setCpf(scan.next());
+		System.out.println("endereço:");
 		setEndereco(scan.next());
 		//System.out.println("data de nascimento");
 		//cli.setDataNascimento(scan.nextDate());
-		System.out.println("email");
+		System.out.println("email: ");
 		setEmail(scan.next());
-		System.out.println("senha");
+		System.out.println("senha: ");
 		setSenha(scan.next());
 		
 	}

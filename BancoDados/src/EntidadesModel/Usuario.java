@@ -74,8 +74,30 @@ public class Usuario {
 	}
 	
 	public void verificadorLogin() {// verificando se o cliente já tem cadastro no bando de dados
-		if ((getNomeUsuario() == login) && (getSenhaApp() == senha)) {
-			System.out.println("seja bam vindo ao central de atendimento ");
+		if ((getNomeUsuario() == login) && (getSenhaApp() == senha)) {	
+			Scanner entrada = new Scanner(System.in);
+		
+			System.out.println("========= Bem Vindo a OdontoSmile =========");
+			System.out.println("[1] Agendamento"
+					          +"[2] Para SAIR");
+			
+			
+			String esc = entrada.next();
+			
+			switch(esc) {
+			
+			case "1":
+				Agendamento agendamento = new Agendamento();
+				
+				agendamento.agendamento();
+				
+				
+			case "2":
+				System.out.println("Obrigado por usar OdontoSmile!");
+					if (esc.equals("2")) {
+						break;
+					}
+			}
 		}
 		else {
 			System.err.println("VOCE NAO POSSUI UM CADASTRO");

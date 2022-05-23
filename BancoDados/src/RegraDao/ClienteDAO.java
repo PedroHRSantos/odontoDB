@@ -51,7 +51,7 @@ public class ClienteDAO {
 			//adicionar os valores espereado pela query
 			pstm = (PreparedStatement) conn.prepareStatement(sql);
 			pstm.setString(1, cliente.getNomeCliente());
-			pstm.setInt(2, cliente.getCpf());
+			pstm.setString(2, cliente.getCpf());
 			pstm.setString(3, cliente.getEndereco());
 			//pstm.setDate(4, new Date(cliente.getDataNascimento().getTime()));
 			pstm.setString(4, cliente.getEmail());
@@ -106,7 +106,7 @@ public class ClienteDAO {
 				cliente.setIdCliente(rset.getInt("idCliente"));
 				cliente.setNomeCliente(rset.getString("nomeCliente"));
 				
-				cliente.setCpf(rset.getInt("cpf"));
+				cliente.setCpf(rset.getString("cpf"));
 				cliente.setEndereco(rset.getString("endereco"));
 				//funcionario.setDataNascimento(rset.getDate("dataNascimento"));
 				cliente.setEmail(rset.getString("email"));
@@ -151,7 +151,7 @@ public class ClienteDAO {
 			
 			//add os valores
 			pstm.setString(1, cliente.getNomeCliente());
-			pstm.setInt(2, cliente.getCpf());
+			pstm.setString(2, cliente.getCpf());
 			pstm.setString(3, cliente.getEndereco());
 			pstm.setString(4, cliente.getEmail());
 			pstm.setString(5, cliente.getSenha());

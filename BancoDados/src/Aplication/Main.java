@@ -102,22 +102,28 @@ public class Main {
 					if (true) {// primeiro cadastro do paciente
 						
 						System.out.println("==== Dados Paciente ====");
+
+						
 						System.out.println("Nome do paciente: ");
 						cli.setNomeCliente(entrada.nextLine());
+						
 						System.out.println("CPF: ");
-						cli.setCpf(entrada.nextInt());
+						cli.setCpf(entrada.nextLine());
+						
 						System.out.println("Endereço: ");
 						cli.setEndereco(entrada.nextLine());
+						
 						System.out.println("==== Cadastro Login ====");
 						System.out.println("Email: ");
 						cli.setEmail(entrada.nextLine());
+						
 						System.out.println("Senha: ");
 						cli.setSenha(entrada.nextLine());
 					}
 						//visualização registro do bd
 							for( Cliente c: clienteDao.getCleinte()) {
 								System.out.println("======== Cadastro Realizado ========");
-								System.out.println("id: " + c.getIdCliente());
+								//System.out.println("id: " + c.getIdCliente());
 								System.out.println("Nome funcionario: " + c.getNomeCliente());
 								System.out.println("cpf:  " + c.getCpf());
 								System.out.println("endereço: " + c.getEndereco());
@@ -127,7 +133,7 @@ public class Main {
 							}
 					System.out.println("========= Bem Vindo a OdontoSmile =========");
 					System.out.println("[1] Agendamento"
-							          +"[3] Para SAIR");
+							          +"[2] Para SAIR");
 					
 					String esc = entrada.next();
 					
@@ -141,9 +147,7 @@ public class Main {
 						
 					case "2":
 						System.out.println("Obrigado por usar OdontoSmile");
-						System.out.println("Porfavor insira [Finalizar]");
-						String continua = entrada.next();
-							if (continua.equals("Finalizar")|| continua.equals("finalizar")) {
+							if (esc.equals("2")) {
 								break;
 							}
 				
