@@ -48,7 +48,7 @@ public class ClienteDAO {
 			conn = ConnectionFactory.createConnectionToMySQL();
 			
 			
-			//adicoinar os valores espereado pela query
+			//adicionar os valores espereado pela query
 			pstm = (PreparedStatement) conn.prepareStatement(sql);
 			pstm.setString(1, cliente.getNomeCliente());
 			pstm.setInt(2, cliente.getCpf());
@@ -57,7 +57,7 @@ public class ClienteDAO {
 			pstm.setString(4, cliente.getEmail());
 			pstm.setString (5, cliente.getSenha());
 			
-			//execultar a quaryt
+			//execultar a query
 			pstm.execute();
 			
 		}catch(Exception e) {
@@ -222,6 +222,7 @@ public class ClienteDAO {
 		}
 		
 	}
+
 	
 	
 	

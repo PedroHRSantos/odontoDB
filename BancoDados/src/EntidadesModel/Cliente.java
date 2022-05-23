@@ -3,7 +3,7 @@ package EntidadesModel;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Cliente {
+public class Cliente extends Usuario{
 	private int idCliente;
 	private String nomeCliente;
 	private int cpf;

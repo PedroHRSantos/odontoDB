@@ -3,7 +3,7 @@ package EntidadesModel;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Funcionario {
+public class Funcionario extends Usuario {
 	private int idFuncionario;
 	private String nomeFuncionario;
 	private String funcao;
@@ -70,11 +70,11 @@ public class Funcionario {
 		this.senha = senha;
 	}
 	
-	
+	/*
 	Scanner scan = new Scanner(System.in);
 	
 	public void informacaoFuncionario() {
-		System.out.println("Nome do cliente");
+		System.out.println("Nome do Funcionario");
 		setNomeFuncionario(scan.next());
 		
 		System.out.println("cpf");
@@ -89,5 +89,6 @@ public class Funcionario {
 		setSenha(scan.next());
 		
 	}
+	*/
 	
 }
